@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Destino</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- VTurb Preload -->
+  <link rel="preload" href="https://scripts.converteai.net/9050d4b5-17f8-4d71-aef7-2bd81256d8b4/players/6a3f02d0d7338761a2d0a25b/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/9050d4b5-17f8-4d71-aef7-2bd81256d8b4/6a3f02692a950a2cf945b7b0/main.m3u8" as="fetch">
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+</head>
+<body>
+
+  <!-- EMOJI HEADER -->
+  <div class="emoji-top">🔞</div>
+
+  <!-- VIDEO AREA - VTurb SmartPlayer -->
+  <div class="video-container" id="video-container">
+    <vturb-smartplayer id="vid-6a3f02d0d7338761a2d0a25b" style="display: block; margin: 0 auto; width: 100%; max-width: 100%;">
+      <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: transparent;"></div>
+    </vturb-smartplayer>
+    <!-- Overlay para detectar clics -->
+    <div id="player-click-overlay" class="player-overlay"></div>
+  </div>
+
+  <!-- VIEWER COUNTER -->
+  <div class="viewer-counter">
+    <span class="green-dot"></span>
+    <span id="viewer-text">Carregando...</span>
+  </div>
+
+  <!-- GIF OVERLAY (aparece cuando pausa el vídeo) -->
+  <div id="gif-overlay" class="gif-overlay hidden">
+    <img src="pausa.gif" alt="Pausa" class="pause-gif">
+  </div>
+
+  <!-- CTA BUTTON -->
+  <div id="cta" class="cta-hidden">
+    <a href="#" class="btn-primary">
+      Quiero hacerla llegar al orgasmo 🔥
+    </a>
+  </div>
+
+  <!-- VTurb Player Script -->
+  <script type="text/javascript">
+    var s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/9050d4b5-17f8-4d71-aef7-2bd81256d8b4/players/6a3f02d0d7338761a2d0a25b/v4/player.js";
+    s.async = true;
+    document.head.appendChild(s);
+  </script>
+
+  <!-- Performance Tracking -->
+  <script>
+    !function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

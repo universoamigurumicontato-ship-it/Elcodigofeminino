@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificación de Edad</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: radial-gradient(circle at center, #7a0000 0%, #5a0000 40%, #2b0000 75%, #120000 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      animation: slideUp 0.6s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-container {
+      margin-bottom: 40px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      border: 4px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      line-height: 1.3;
+    }
+
+    .breve {
+      color: #ff4444;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(180deg, #ff4444, #cc0000);
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+      animation: pulse-btn 1.5s infinite;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(255, 68, 68, 0.6);
+    }
+
+    @keyframes pulse-btn {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(255, 68, 68, 0.6);
+      }
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .breve {
+        font-size: 20px;
+      }
+
+      .question {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 14px 32px;
+        font-size: 16px;
+      }
+
+      .image-container img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect fill='%23333' width='300' height='300'/%3E%3Ctext x='150' y='150' font-size='60' fill='%23666' text-anchor='middle' dy='.3em' font-weight='bold'%3E18+%3C/text%3E%3C/svg%3E" alt="18+">
+    </div>
+
+    <h1>ESTE CONTENIDO SERÁ REMOVIDO EN</h1>
+    <div class="breve">BREVE</div>
+
+    <p class="question">
+      ¿Confirmas que tienes +18 años para acceder a este secreto?
+    </p>
+
+    <a href="/vsl" class="btn">
+      ¡VER AHORA!
+      <span>→</span>
+    </a>
+
+    <div class="footer">
+      <p>Copyright 2025 - Todos los derechos reservados.</p>
+    </div>
+  </div>
+
+</body>
+</html>
