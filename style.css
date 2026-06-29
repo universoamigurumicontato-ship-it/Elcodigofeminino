@@ -66,6 +66,46 @@ vturb-smartplayer {
   z-index: 100;
 }
 
+/* SOUND UNLOCK OVERLAY */
+.sound-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sound-overlay.hidden {
+  display: none;
+}
+
+.sound-btn {
+  padding: 18px 44px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #ff4444, #cc0000);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 68, 68, 0.5);
+  animation: pulse-btn 1.5s infinite;
+  letter-spacing: 0.5px;
+}
+
+.sound-btn:active {
+  transform: scale(0.97);
+}
+
+.sound-hint {
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+}
+
 /* GIF OVERLAY */
 .gif-overlay {
   position: fixed;

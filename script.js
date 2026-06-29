@@ -1,3 +1,48 @@
+// Desbloquear áudio do navegador
+function unlockAudio() {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+  const ctx = new AudioContext();
+  const buf = ctx.createBuffer(1, 1, 22050);
+  const src = ctx.createBufferSource();
+  src.buffer = buf;
+  src.connect(ctx.destination);
+  src.start(0);
+  ctx.resume();
+}
+
+function tryUnmuteVTurb() {
+  document.querySelectorAll('video').forEach(v => {
+    v.muted = false;
+    v.volume = 1;
+    if (v.paused) v.play().catch(() => {});
+  });
+  const player = document.getElementById('vid-6a3f02d0d7338761a2d0a25b');
+  if (player && player.smartplayer) {
+    try { player.smartplayer.unmute(); } catch(e) {}
+    try { player.smartplayer.play(); } catch(e) {}
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('sound-overlay');
+  const btn = document.getElementById('sound-btn');
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      unlockAudio();
+      overlay.classList.add('hidden');
+      tryUnmuteVTurb();
+      setTimeout(tryUnmuteVTurb, 500);
+      setTimeout(tryUnmuteVTurb, 1500);
+    });
+  }
+
+  setupPlayerClickListener();
+  setupVideoEndTimer();
+  setupScrollAfter5s();
+});
+
 // Contador de visualizadores
 const viewerText = document.getElementById('viewer-text');
 let viewers = 200;
@@ -91,13 +136,6 @@ function setupVTurbEndDetection() {
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  setupPlayerClickListener();
-  setupVideoEndTimer();
-  setupScrollAfter5s();
-});
-
 setTimeout(() => {
   setupPlayerClickListener();
-  setupVideoEndTimer();
 }, 500);
