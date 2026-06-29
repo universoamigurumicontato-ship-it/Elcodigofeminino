@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/vsl", "dest": "/index.html" },
+    { "src": "/pre06", "dest": "/pre06.html" },
+    { "src": "/", "dest": "/coming-soon.html" }
+  ]
+}
