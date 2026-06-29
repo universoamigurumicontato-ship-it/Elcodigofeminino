@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
       tryUnmuteVTurb();
       setTimeout(tryUnmuteVTurb, 500);
       setTimeout(tryUnmuteVTurb, 1500);
+      // Inicia contagem a partir do momento que o lead começa a assistir
+      setupVideoEndTimer();
+      setupScrollAfter5s();
     });
   }
 
   setupPlayerClickListener();
-  setupVideoEndTimer();
-  setupScrollAfter5s();
 });
 
 // Contador de visualizadores
