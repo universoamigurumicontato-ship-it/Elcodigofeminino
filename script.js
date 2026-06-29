@@ -104,7 +104,7 @@ function setupScrollAfter5s() {
 // Mostrar botón CTA en el minuto 18:24 del vídeo
 // 18:24 = 18*60 + 24 = 1104 segundos
 function setupVideoEndTimer() {
-  const videoDurationMs = 1104 * 1000; // 18:24 en milisegundos
+  const videoDurationMs = 984 * 1000; // 16:24 en milisegundos
 
   setTimeout(() => {
     console.log('Minuto 18:24 - Mostrando CTA');
