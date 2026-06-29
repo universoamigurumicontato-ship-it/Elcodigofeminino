@@ -69,14 +69,6 @@ function hidePauseGif() {
   gifOverlay.classList.remove('visible');
 }
 
-function showCTA() {
-  const ctaElement = document.getElementById('cta');
-  ctaElement.classList.add('visible');
-  setTimeout(() => {
-    ctaElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 300);
-}
-
 // Detectar clics en el player
 function setupPlayerClickListener() {
   const overlay = document.getElementById('player-click-overlay');
