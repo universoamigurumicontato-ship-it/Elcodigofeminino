@@ -49,13 +49,20 @@ function setupPlayerClickListener() {
   }
 }
 
-// Mostrar botón CTA después de que el vídeo termine
-// Duración del vídeo: 16:34 minutos = 994 segundos
+// Scroll suave até o final da página após 5 segundos de vídeo
+function setupScrollAfter5s() {
+  setTimeout(() => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }, 5000);
+}
+
+// Mostrar botón CTA en el minuto 18:24 del vídeo
+// 18:24 = 18*60 + 24 = 1104 segundos
 function setupVideoEndTimer() {
-  const videoDurationMs = 994 * 1000; // 16:34 en milisegundos
+  const videoDurationMs = 1104 * 1000; // 18:24 en milisegundos
 
   setTimeout(() => {
-    console.log('Vídeo completado - Mostrando CTA');
+    console.log('Minuto 18:24 - Mostrando CTA');
     showCTA();
   }, videoDurationMs);
 
@@ -87,6 +94,7 @@ function setupVTurbEndDetection() {
 document.addEventListener('DOMContentLoaded', () => {
   setupPlayerClickListener();
   setupVideoEndTimer();
+  setupScrollAfter5s();
 });
 
 setTimeout(() => {
